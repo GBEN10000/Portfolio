@@ -524,21 +524,21 @@ main {
 /* Media query for large tablets and smaller devices */
 @media (max-width: 1024px) {
   .service-list {
-    grid-template-columns: repeat(4fr) ; /* Three columns + one auto */
+    grid-template-columns: repeat(3fr) ; /* Three columns + one auto */
   }
 }
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .service-list {
-    grid-template-columns: repeat(3fr) auto; /* Two columns + one auto */
+    grid-template-columns: repeat(2fr) auto; /* Two columns + one auto */
   }
 }
 
 /* Media query for very small mobile devices */
 @media (max-width: 480px) {
   .service-list {
-    grid-template-columns: 2fr ; /* One column + one auto */
+    grid-template-columns: 1fr ; /* One column + one auto */
   }
 }
 
