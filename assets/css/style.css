@@ -538,7 +538,7 @@ main {
 /* Media query for very small mobile devices */
 @media (max-width: 480px) {
   .service-list {
-    grid-template-columns: 1fr ; /* One column + one auto */
+    grid-template-columns: 2fr ; /* One column + one auto */
   }
 }
 
