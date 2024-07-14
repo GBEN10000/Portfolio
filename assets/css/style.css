@@ -457,10 +457,10 @@ main {
 .contact-info address { font-style: normal; }
 
 .social-list {
-  display:inline-flex;
+  display: inline-flex;
   margin-top: 20px;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   gap: 15px;
   padding-bottom: 4px;
   padding-left: 7px;
