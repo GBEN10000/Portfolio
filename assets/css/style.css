@@ -515,17 +515,33 @@ main {
 .service { margin-bottom: 35px; }
 
 .service-title { margin-bottom: 20px; }
-
 .service-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Five columns */
+  grid-template-columns: repeat(5, 1fr) auto; /* Five columns + one auto */
   gap: 10px; /* Adjust gap as needed */
 }
+
+/* Media query for large tablets and smaller devices */
 @media (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: repeat(3, 1fr);
+  .service-list {
+    grid-template-columns: repeat(3, 1fr) auto; /* Three columns + one auto */
   }
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr) auto; /* Two columns + one auto */
+  }
+}
+
+/* Media query for very small mobile devices */
+@media (max-width: 480px) {
+  .service-list {
+    grid-template-columns: 1fr auto; /* One column + one auto */
+  }
+}
+
 
 .service-item {
   position: relative;
