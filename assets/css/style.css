@@ -354,49 +354,75 @@ main {
   padding: 3px 12px;
   border-radius: 8px;
 }
+:root {
+    --orange-yellow-crayola: #FFB347;
+    --border-gradient-onyx: linear-gradient(to right, #434343, #000000);
+    --shadow-2: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --transition-1: all 0.3s ease;
+    --transition-2: all 0.5s ease;
+    --bg-gradient-jet: linear-gradient(to right, #232526, #414345);
+    --bg-gradient-yellow-1: linear-gradient(to right, #f7b733, #fc4a1a);
+    --bg-gradient-yellow-2: linear-gradient(to right, #fc4a1a, #f7b733);
+}
 
 .info_more-btn {
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  border-radius: 0 15px;
-  font-size: 13px;
-  color: var(--orange-yellow-crayola);
-  background: var(--border-gradient-onyx);
-  padding: 10px;
-  box-shadow: var(--shadow-2);
-  transition: var(--transition-1);
-  z-index: 1;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 0 15px;
+    font-size: 13px;
+    color: var(--orange-yellow-crayola);
+    background: var(--border-gradient-onyx);
+    padding: 10px;
+    box-shadow: var(--shadow-2);
+    transition: var(--transition-1);
+    z-index: 1;
+    animation: blink-animation 1s steps(5, start) infinite;
 }
 
 .info_more-btn::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: var(--bg-gradient-jet);
-  transition: var(--transition-1);
-  z-index: -1;
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: var(--bg-gradient-jet);
+    transition: var(--transition-1);
+    z-index: -1;
 }
 
 .info_more-btn:hover,
-.info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
+.info_more-btn:focus {
+    background: var(--bg-gradient-yellow-1);
+}
 
 .info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+.info_more-btn:focus::before {
+    background: var(--bg-gradient-yellow-2);
+}
 
-.info_more-btn span { display: none; }
+.info_more-btn span {
+    display: none;
+}
 
 .sidebar-info_more {
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition-2);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-2);
 }
 
 .sidebar.active .sidebar-info_more {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+
+
 
 .contacts-list {
   display: grid;
