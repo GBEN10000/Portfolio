@@ -153,7 +153,7 @@ if (infoBtn && sidebarMore) {
    EmailJS (v4 – Correct Way)
 ================================ */
 emailjs.init({
-  publicKey: "NYsUsDTbFczEMg19h",
+  publicKey: "gZ0rk4nZKqiKHX6q4",
 });
 
 const contactForm = document.getElementById("contact-form");
