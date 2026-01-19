@@ -166,7 +166,12 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
 
-      emailjs.sendForm('service_z55j71k', 'template_sck8ixv', this)
+    emailjs.sendForm(
+  'service_z55j71k',   // ✅ your service ID
+  'template_sck8ixv', // ⚠️ must exist in EmailJS
+  this
+)
+
           .then(function() {
               alert('Message sent successfully!');
           }, function(error) {
