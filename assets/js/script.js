@@ -163,18 +163,24 @@ if (contactForm) {
     event.preventDefault();
 
     emailjs.sendForm(
-      "service_z55j71k",
-      "template_sck8ixv",
-      this
-    ).then(
-      () => {
-        alert("Message sent successfully!");
-        this.reset();
-      },
-      (error) => {
-        console.error("EmailJS Error:", error);
-        alert("Failed to send message. Please try again later.");
-      }
-    );
+  "service_z55j71k",
+  "template_sck8ixv",
+  this
+).then(
+  (result) => {
+    console.log("EmailJS SUCCESS:", result);
+    alert("Message sent successfully!");
+    this.reset();
+  },
+  (error) => {
+    console.error("EmailJS FULL ERROR:", {
+      status: error.status,
+      text: error.text,
+      error: error
+    });
+    alert("Failed to send message");
+  }
+);
+
   });
 }
